@@ -27,7 +27,7 @@ class loss_p(nn.Module):
 
     def forward(self, p, weight):
         loss_left  = 1.0 * (1 * (0.4 - p))**3
-        loss_right = 1.0 * (4*(p - 0.6))**1
+        loss_right = 1.0 * (4*(p - 0.7))**1
         loss_mid = torch.zeros(loss_right.size())
 
         loss = torch.max(loss_left, loss_right)
