@@ -10,9 +10,9 @@ class loss_r(nn.Module):
         super(loss_r, self).__init__()
 
     def forward(self, r):
-        loss_left = (-r)**3
+        loss_left = (-10*r)**(1)
 #        print('loss_left type', loss_left)
-        loss_right = 0.0001 * (r - 1) 
+        loss_right = 0.0000 * (r - 1) 
         loss_mid = torch.zeros(loss_right.size())
 
         loss = torch.max(loss_left, loss_right)
@@ -27,7 +27,7 @@ class loss_p(nn.Module):
 
     def forward(self, p, weight):
         loss_left  = 1.0 * (1 * (0.4 - p))**3
-        loss_right = 1.0 * (4*(p - 0.7))**1
+        loss_right = 1.0 * (4*(p - 0.65))**1
         loss_mid = torch.zeros(loss_right.size())
 
         loss = torch.max(loss_left, loss_right)

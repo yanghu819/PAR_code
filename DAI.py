@@ -97,4 +97,10 @@ AA = A.numpy()*(r_data)
 
 print(np.sum(AA,0)/num_n)
 
+
+for i in r_data[:,1]:
+    print(i)
+
+np.sum(r_data[:,0] != 0)
+
 #
