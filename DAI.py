@@ -63,7 +63,7 @@ loss_p = loss_p()
 
 
 
-for i in range(8000):
+for i in range(10000):
      
     output = net(A)
     
